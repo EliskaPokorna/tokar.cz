@@ -1,0 +1,79 @@
+@use 'base';
+
+/*Pruh - čtyři karty vedle sebe + text*/
+
+.text--strong {
+  font-size: base.$font-size-primary;
+}
+
+.grid-col-4 {
+  background-color: #f0f0f0;
+  padding-bottom: 0;
+}
+
+.card {
+  &__column {
+    background-color: white;
+    margin: 20px 0;
+  }
+
+  &__column--end {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  .text--different {
+    padding: 30px;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .text {
+    padding: 30px;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__column {
+      margin: 0;
+    }
+  }
+}
+.card__column {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  .card__column__img {
+    flex: 0 1 50%;
+  }
+
+  .card__column__text {
+    flex: 0 1 50%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card,
+  .grid-col-4__text {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,68 @@
+@use 'base';
+
+/*Patička*/
+
+.footer {
+  padding: 20px;
+}
+
+.footer__img {
+  height: 140px;
+}
+
+.footer__icon {
+  height: 50px;
+}
+
+.footer__link {
+  font-size: base.$font-size-third;
+  display: flex;
+  justify-content: end;
+}
+
+.footer__item {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.footer__text {
+  font-size: 14px;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.line {
+  max-width: 100%;
+}
+
+a svg:hover #facebook-f {
+  fill: base.$color-primary;
+}
+
+a svg:hover #facebook-okoli {
+  fill: white;
+  stroke: base.$color-primary;
+  stroke-width: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__item {
+    font-size: base.$font-size-secondary;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    padding: 80px;
+    max-width: 1680px;
+    margin: 0 auto;
+  }
+
+  .footer__item {
+    font-size: base.$font-size-primary;
+  }
+
+  .footer__text {
+    font-size: base.$font-size-third;
+  }
+}

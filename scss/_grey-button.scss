@@ -1,0 +1,138 @@
+@use 'base';
+
+/*Šedý pruh s tlačítkem*/
+
+.text-button {
+  background-color: #f0f0f0;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.text-1 {
+  margin-top: 0;
+}
+
+.strong--text {
+  font-size: base.$font-size-primary;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.call-to-action__right {
+  margin-bottom: 10px;
+}
+
+/*.button--basic {
+    padding: 10px 30px;
+    border: 1px solid base.$color-primary;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: base.$font-size-third;
+    margin: base.$m-spacer-primary;
+    background-color: white;
+    color: base.$color-primary;
+    text-decoration: none;
+}*/
+
+.button--basic:hover,
+.button--basic:focus,
+.button--basic:active {
+  background-color: #9c2a04;
+  color: white;
+}
+
+.button--basic {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid base.$color-primary;
+  color: base.$color-primary;
+  font-weight: bold;
+  text-align: center;
+  font-size: base.$font-size-third;
+  padding: 15px 30px;
+  width: 200px;
+  //transition: all 0.3s;
+  cursor: pointer;
+  margin: base.$m-spacer-primary;
+}
+
+.button--basic span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.button--basic:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .call-to-action {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    align-items: center;
+  }
+
+  .text-2 {
+    margin-bottom: 0;
+  }
+
+  .call-to-action__left {
+    margin-left: 20px;
+  }
+
+  .call-to-action__right {
+    margin-right: 40px;
+  }
+
+  .button--basic {
+    font-size: base.$font-size-primary;
+  }
+
+  .text-button {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .call-to-action__left {
+    margin-left: 80px;
+  }
+
+  .call-to-action__right {
+    margin-right: 100px;
+  }
+
+  .strong--text {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .text-button {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+
+  .button--basic {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .call-to-action {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .call-to-action__left {
+    margin-left: 0;
+  }
+
+  .call-to-action__right {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,12 @@
+@use 'base';
+@use 'co-nabizim';
+@use 'grey-button';
+@use 'kontakt';
+@use 'footer';
+
+.subtitle {
+  color: base.$color-primary;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}

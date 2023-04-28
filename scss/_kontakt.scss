@@ -1,0 +1,70 @@
+@use 'base';
+
+.flex-col-3-kontakt {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.flex-icon {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.text--kontakt {
+  text-align: center;
+}
+
+.link--kontakt {
+  text-decoration: none;
+  color: base.$color-primary;
+  text-decoration: underline;
+}
+
+.link--kontakt:hover,
+.link--kontakt:focus,
+.link--kontakt:active {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .flex-icon {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .flex-icon__column {
+    margin-bottom: 10px;
+  }
+
+  @keyframes pohyb {
+    50% {
+      transform: scale(1.08);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .icon__svg--kontakt {
+    animation: pohyb 2s 3s infinite alternate ease both;
+    animation-name: pohyb;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .flex-col-3-kontakt {
+    padding: 40px 80px 80px 80px;
+  }
+
+  .flex-icon {
+    max-width: 1680px;
+    margin: 0 auto;
+  }
+}
